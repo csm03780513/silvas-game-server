@@ -14,7 +14,7 @@ app.get("/create", (req, res) => {
 
 // Create a new game
 app.post("/create", (req, res) => {
-    const gameId = Math.random().toString(36).substr(2, 9);
+    const gameId = Math.random().toString().substr(2, 3);
     games[gameId] = {
         board: [["", "", ""], ["", "", ""], ["", "", ""]],
         players: {},
